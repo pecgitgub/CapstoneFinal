@@ -20,3 +20,8 @@ Data preparation for text prediction
 
 ### ngram_optimized.Rdata
 Data created from  Ngram_optimized.R. This file is used for text predictions
+
+### Shiny Application link for text prediction
+
+https://pechetty.shinyapps.io/CapstoneProj/
+
