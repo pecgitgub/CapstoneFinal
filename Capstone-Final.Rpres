@@ -1,0 +1,70 @@
+Coursera Data Science: Capstone Project Slide Deck
+========================================================
+author: Satya H Pechetty
+date: `r date()`
+
+
+ 
+
+Predict the Next Word
+
+App Overview
+========================================================
+type: sub-section
+<span style="color:blue; font-weight:bold; font-size:0.7em">This presentation is created as part of the requirement for the Coursera Data Science Capstone Course. </span>
+
+<font size="5">
+The goal of the project is to build a predictive text model combined with a shiny app UI that will predict the next word as the user types a sentence similar to the way most smart phone keyboards are implemented today using the technology of Swiftkey.
+
+*[Shiny App]* - [https://pechetty.shinyapps.io/CapstoneProj/]
+
+*[Github Repo]* - [https://github.com/pecgitgub/CapstoneFinal]
+
+</font>
+
+Data Source
+========================================================
+type: sub-section
+
+<span style="color:blue; font-weight:bold; font-size:0.7em">Before building the word prediction algorithm, data are first processed and cleaned as steps below:</span>
+
+<font size="5">
+
+The source data consists of various corpora scraped from publicly available sources. 
+
+The original datasets as well as documentation can be found at http://www.corpora.heliohost.org/
+
+</font>
+
+
+
+Word Prediction Algorithm Detail
+========================================================
+type: sub-section
+
+<span style="color:blue; font-weight:bold;font-size:0.7em">The prediction model for next word is based on the Katz Back-off algorithm. Explanation of the next word prediction flow is as below:</span>
+
+<font size="5">
+
+1. Load N-Gram frequency tables
+2. Process input text from the user
+3. Compare the input text to text already observed in the N-Gram frequency tables
+4. Start at the highest magnitude n-gram frequency table (app uses 6-grams) and see if there is a match for the input text
+5. If any number of matches occurs, aggregate identical matches and then calculate probabilities for each aggregated match (number of occurrences / total occurrences)
+6. Predict the word with the greatest probability
+7. If no matches occur for this n-gram level, decreases n by one and repeat steps 3-6
+
+</font>
+
+Shiny Application Usage
+========================================================
+type: sub-section
+
+<span style="color:blue; font-weight:bold;font-size:0.7em">
+A Shiny application was developed based on the next word prediction model as described here. 
+To use the app.
+
+Enter the text input to predict and press submit button. 
+This will result in next word prediction , Table details, plot in different tabs.
+
+</span> 
