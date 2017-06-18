@@ -25,3 +25,6 @@ Data created from  Ngram_optimized.R. This file is used for text predictions
 
 https://pechetty.shinyapps.io/CapstoneProj/
 
+### Capstone-Final.Rpres
+
+Capstone project presentation
